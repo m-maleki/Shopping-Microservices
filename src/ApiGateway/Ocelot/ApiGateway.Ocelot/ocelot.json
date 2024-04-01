@@ -1,0 +1,72 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/api/v1/Products/GetProducts",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+
+      "DownstreamPathTemplate": "/api/v1/Products/GetProducts",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7150
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/Discount/GetDiscount",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+
+      "DownstreamPathTemplate": "/api/v1/Discount/GetDiscount",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7052
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/Basket/GetBasket",
+      "UpstreamHttpMethod": [ "GET"],
+      "DownstreamPathTemplate": "/api/v1/Basket/GetBasket",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7089
+        }
+      ],
+
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/Basket/UpdateBasket",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+
+      "DownstreamPathTemplate": "/api/v1/Basket/UpdateBasket",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7089
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/Products/GetProductById",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+
+      "DownstreamPathTemplate": "/api/v1/Products/GetProductById",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7150
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "localhost:5018"
+  }
+}
